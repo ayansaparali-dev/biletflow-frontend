@@ -1,0 +1,166 @@
+.shell {
+  display: flex;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--ink);
+  position: relative;
+}
+
+/* ---- Desktop sidebar ---- */
+
+.sidebar {
+  width: var(--sidebar-width);
+  flex-shrink: 0;
+  background: var(--panel);
+  border-right: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  padding: 28px 20px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 22px;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.roleTag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.navGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.navGroupLabel {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: var(--ink-faint);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.divider {
+  margin: 28px 0 12px 0;
+  height: 1px;
+  background: var(--line);
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  color: var(--ink-soft);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.navItem:hover {
+  color: var(--ink);
+}
+
+.navItemActive {
+  background: var(--gold);
+  color: var(--bg);
+  font-weight: 700;
+}
+
+.navItemActive:hover {
+  color: var(--bg);
+}
+
+/* ---- Mobile top bar + bottom tab bar ---- */
+
+.mobileTopBar,
+.mobileTabBar {
+  display: none;
+}
+
+.content {
+  flex-grow: 1;
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    display: none;
+  }
+
+  .shell {
+    flex-direction: column;
+  }
+
+  .mobileTopBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--line);
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    z-index: 20;
+  }
+
+  .mobileWordmark {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+
+  .mobileRoleTag {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    text-transform: uppercase;
+    border: 1px solid var(--gold);
+    padding: 3px 8px;
+  }
+
+  .mobileTabBar {
+    display: flex;
+    border-top: 1px solid var(--line);
+    background: var(--panel);
+    position: sticky;
+    bottom: 0;
+    z-index: 20;
+  }
+
+  .tabItem {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 10px 0;
+    color: var(--ink-faint);
+    min-width: 0;
+  }
+
+  .tabItemActive {
+    color: var(--gold);
+  }
+
+  .tabLabel {
+    font-family: var(--font-mono);
+    font-size: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+}

@@ -1,0 +1,19 @@
+:root {
+  --bg: oklch(16% 0.012 280);
+  --panel: oklch(21% 0.015 280);
+  --panel-2: oklch(25% 0.016 280);
+  --ink: oklch(96% 0.004 280);
+  --ink-soft: oklch(70% 0.01 280);
+  --ink-faint: oklch(50% 0.012 280);
+  --gold: oklch(80% 0.17 85);
+  --pink: oklch(66% 0.18 345);
+  --line: oklch(32% 0.015 280);
+  --line-soft: oklch(26% 0.014 280);
+
+  --font-display: 'Big Shoulders Display', sans-serif;
+  --font-body: 'Archivo', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+
+  --sidebar-width: 232px;
+  --content-max: 760px;
+}
